@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DataViz Dashboard Components</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- PapaParse for CSV parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1>DataViz Dashboard Components</h1>
+    <div class="controls">
+      <label class="upload">
+        Upload CSV
+        <input id="csvFile" type="file" accept=".csv" />
+      </label>
+      <button id="downloadSample">Download sample.csv</button>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>Time Series (Line)</h2>
+      <canvas id="lineChart"></canvas>
+    </section>
+
+    <section class="card">
+      <h2>Category Totals (Bar)</h2>
+      <canvas id="barChart"></canvas>
+    </section>
+
+    <section class="card">
+      <h2>Category Distribution (Pie)</h2>
+      <canvas id="pieChart"></canvas>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Open-source · MIT License · Built for GitHub Sponsors</small>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
